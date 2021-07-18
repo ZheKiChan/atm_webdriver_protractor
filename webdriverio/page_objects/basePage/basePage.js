@@ -44,6 +44,14 @@ class BasePage {
             timeoutMsg: 'Message on failure'
         });
     }
+
+    async getElementValue(element) {
+        return element.getValue();
+    }
+
+    async browserWait(miliseconds) {
+        await browser.pause(miliseconds);
+    }
 }
 
 module.exports = BasePage;
